@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+name="description"
+content="simple calculator for simple operations, fast and efficient.">
+		<link rel="stylesheet" href="style.css"/>
+		<script src="/main.js"></script>
+		<link rel="icon" href="img/loguit.PNG" type="image/png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+		<title>Simple Calculator</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="logo">
+				<img src="img/Logo.svg" alt="NumCrunch Logo">
+			</div>
+		</header>
+		<section class="hero">
+			<div class="hero-text">
+				<h2>Quick Arithmetic Solutions</h2>
+				<h1>Online <span>Calculator</span> for your Daily Work</h1>
+				<p class="low-text">Perform all your calculations in the comfort of your browser.</p>
+
+				<div class="action-section">
+					<button class="get-started-btn" onclick="scrollToCalculator()">Get Started <i class="fas fa-arrow-right"></i></button>
+					<p class="users-count">5 people have used the<br> this calculator today!</p>
+			</div>
+		</div>
+			<div class="hero-image">
+				<img src="img/hero-img.svg" alt="Calculator Illustration">
+			</div>
+		</section>
+		<section class="features">
+			<div class="feature">
+				<img src="img/Vector2.svg" alt="Effortless Calculations">
+				<h3>Effortless Calculations</h3>
+				<p>Perform basic arithmetic operations with just a few clicks or taps.</p>
+			</div>
+			<div class="feature">
+				<img src="/img/Vector.svg" alt="Accessible Anywhere">
+				<h3>Accessible Anywhere</h3>
+				<p>Access the calculator online from any device with internet connectivity.</p>
+			</div>
+			<div class="feature">
+				<img src="img/Vector1.svg" alt="Intuitive Interface">
+				<h3>Intuitive Interface</h3>
+				<p>Enjoy a user-friendly interface that simplifies your calculation process.</p>
+			</div>
+		</section>
+		<section class="calculator-section" id="calculator-section">
+			<div class="content-container">
+			<div class="calculator-container">
+				<div class="screen">
+					<div id="history"></div> <!-- Historial de operaciones -->
+					<div class="input-container">
+					<span class="equal-sign" onclick="copyToClipboard()">=</span>
+					<div id="screen" aria-label="Calculator-screen"></div>
+					</div>
+					</div>
+				<div class="buttons">
+				<button class="number-button" onclick="clearEntry()">CE</button>
+				<button class="number-button" onclick="clearScreen()">C</button>
+				<button class="number-button" onclick="appendToScreen('%')">%</button>
+				<button class="operation-button" onclick="appendToScreen('/')">/</button>
+		
+				<button class="number-button" onclick="appendToScreen('7')">7</button>
+				<button class="number-button" onclick="appendToScreen('8')">8</button>
+				<button class="number-button" onclick="appendToScreen('9')">9</button>
+				<button class="operation-button" onclick="appendToScreen('*')">x</button>
+		
+				<button class="number-button" onclick="appendToScreen('4')">4</button>
+				<button class="number-button" onclick="appendToScreen('5')">5</button>
+				<button class="number-button" onclick="appendToScreen('6')">6</button>
+				<button class="operation-button" onclick="appendToScreen('-')">-</button>
+		
+				<button class="number-button" onclick="appendToScreen('1')">1</button>
+				<button class="number-button" onclick="appendToScreen('2')">2</button>
+				<button class="number-button" onclick="appendToScreen('3')">3</button>
+				<button class="operation-button" onclick="appendToScreen('+')">+</button>
+		
+				<button class="number-button" onclick="toggleSign()">+/-</button>
+				<button class="number-button" onclick="appendToScreen('0')">0</button>
+				<button class="number-button" onclick="appendToScreen('.')">.</button>
+				<button class="special-button" onclick="calculate()">=</button>
+				</div>
+			</div>
+			<ul class="calculator-instructions">
+				<li><i class="far fa-check-circle"></i> You can write operations directly in <br>the screen section.</li>
+				<li><i class="far fa-check-circle"></i> You can use keyboard keys instead <br>of clicking the buttons.</li>
+				<li><i class="far fa-check-circle"></i> You can copy the results to your <br>clipboard by clicking the "=" sign on the screen.</li>
+			</ul>
+			</div>
+		</section>
+		
+		<section class="cta">
+			<div class="ctas">
+			<h2>Your calculations, <br>breath-takingly simple</h2>
+			<p>Have a seamless, joyful experience while you crunch those numbers!</p>
+			<button class="use-calculator-btn" onclick="scrollToCalculator()">Use Calculator <i class="fas fa-arrow-right"></i></button>
+		</div>
+		</section>
+		<footer class="footer">
+			<p>© 2024 NumCrunch. All rights reserved. 
+			<span class="designer">Design: QuiroDevs</span></p>
+		</footer>
+	</body>
+</html>
